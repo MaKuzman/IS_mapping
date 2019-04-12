@@ -46,8 +46,10 @@ done
 ```{r}
 library(data.table)
 
-nms <- c("Resting", "RestingdNTP", "Activated", "ActivateddNTP")
+
 doItForgenome <- function(genome){
+	nms <- c("Resting", "RestingdNTP", "Activated", "ActivateddNTP")
+
 	for (i in 1:4) {
 	assign(nms[i],{
 		x <- fread(paste(c("SRR886086",i+2,"onhg",genome,"_98.psl"),collapse=""),skip=5)
