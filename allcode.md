@@ -44,23 +44,28 @@ done
 ```
 ##### R code:
 ```{r}
-
 library(data.table)
 
 nms <- c("Resting", "RestingdNTP", "Activated", "ActivateddNTP")
-for (i in 1:4) {
+doItForgenome < function(genome){
+	for (i in 1:4) {
 	assign(nms[i],{
-	x <- fread(paste(c("SRR886086",i+2,"onhg19_98.psl"),collapse=""),skip=5)
-	x<- x[,Pid:=V1/V11][Pid>=0.98][,isUniquelyMapped:={.N==1},V10]
-	x[isUniquelyMapped==TRUE][,.(V10,V14,V16)][,.N,.(V14,V16)]
+		x <- fread(paste(c("SRR886086",i+2,"onhg",genome,"_98.psl"),collapse=""),skip=5)
+		x<- x[,Pid:=V1/V11][Pid>=0.98][,isUniquelyMapped:={.N==1},V10]
+		x[isUniquelyMapped==TRUE][,.(V10,V14,V16)][,.N,.(V14,V16)]
+		})
+	}
+
+
+	afterBlat98 <-sapply(c("Resting", "RestingdNTP", "Activated", "ActivateddNTP"), function(y){
+		x <- get(y)
+		c(TotalUniquelyMappableIS=x[,sum(N)],TotalUniqueIS=x[,.N])
 	})
+	t(afterBlat98)
+
 }
 
-
-afterBlat98 <-sapply(c("Resting", "RestingdNTP", "Activated", "ActivateddNTP"), function(y){
-	x <- get(y)
-	c(TotalUniquelyMappableIS=x[,sum(N)],TotalUniqueIS=x[,.N])
-})
-t(afterBlat98)
+doItForgenome(19)
+doItForgenome(18)
 
 ```
