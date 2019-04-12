@@ -9,7 +9,7 @@ PATHTOpblat=/common/WORK/mfabijanic/programs/icebert-pblat-e05e284/pblat
 $PATHTObbmap/bbduk2.sh in=SRR8860863.fastq out=SRR8860863_clean.fastq lliteral=TGCATCGAAGACCCTTTTAGTCAGTGTGGAAAATCTCTAGCA minlength=0 \
 threads=12 rliteral=TAGTCCCTTAAGCGGAGCCCTATAGTGCTGATGGCGCGAGGGAGGC editdistance=2
 
-$PATHTObbmap/bbduk2.sh in=SRR8860864.fastq out=SRR8860864_clean.fastq lliteral=TGCATACGAGACCCTTTTAGTCAGTGTGGAAAATCTCTAGCACA minlength=0 \
+$PATHTObbmap/bbduk2.sh in=SRR8860864.fastq out=SRR8860864_clean.fastq lliteral=TGCATACGAGACCCTTTTAGTCAGTGTGGAAAATCTCTAGCA minlength=0 \
 threads=12 rliteral=TAGTCCCTTAAGCGGAGCCCTATAGTGCTGATGGCGCGAGGGAGGC editdistance=2  
 
 $PATHTObbmap/bbduk2.sh in=SRR8860865.fastq out=SRR8860865_clean.fastq lliteral=TGCAGTCAAGACCCTTTTAGTCAGTGTGGAAAATCTCTAGCA minlength=0 \
