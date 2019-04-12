@@ -42,7 +42,7 @@ do
 $PATHTOpblat -t=dna -q=dna -threads=10 -maxIntron=0 -minIdentity=98 hg19.fa SRR886086${i}_clean.fasta SRR886086${i}onhg19_98.psl
 done
 ```
-
+##### R code:
 ```{r}
 
 library(data.table)
