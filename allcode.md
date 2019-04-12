@@ -90,3 +90,4 @@ ActivateddNTP                     871           495
 
 ```
 
+https://github.com/MaKuzman/IS_mapping/blob/master/brady.PNG 
