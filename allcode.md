@@ -73,6 +73,19 @@ doItForgenome(18)
 ```
 #### Results:
 ```
+> doItForgenome(19)
+              TotalUniquelyMappableIS TotalUniqueIS
+Resting                           963           701
+RestingdNTP                       478           386
+Activated                         594           363
+ActivateddNTP                     881           501
+
+> doItForgenome(18)
+              TotalUniquelyMappableIS TotalUniqueIS
+Resting                           965           700
+RestingdNTP                       478           386
+Activated                         588           361
+ActivateddNTP                     871           495
 
 
 ```
