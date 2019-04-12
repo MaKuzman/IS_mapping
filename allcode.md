@@ -72,6 +72,8 @@ doItForgenome(18)
 
 ```
 #### Results:
+```
+
 > doItForgenome(19)
               TotalUniquelyMappableIS TotalUniqueIS
 Resting                           963           701
@@ -85,5 +87,5 @@ RestingdNTP                       477           388
 Activated                         588           361
 ActivateddNTP                     871           495
 
-
+```
 
