@@ -90,4 +90,4 @@ ActivateddNTP                     871           495
 
 ```
 
-https://github.com/MaKuzman/IS_mapping/blob/master/brady.PNG 
+![Brady et al table1](https://github.com/MaKuzman/IS_mapping/blob/master/brady.PNG) 
