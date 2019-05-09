@@ -28,19 +28,15 @@ $PATHTOFastxtoolkit0013/bin/fastq_to_fasta -i SRR886086${i}_clean.fastq -o SRR88
 done
 ```
 
-##### BLAT to hg18, hg19:
+##### BLAT to hg19:
 
 ```{bash}
-for i in 3 4 5 6
-do 
-$PATHTOpblat -t=dna -q=dna -threads=10 -maxIntron=0 -minIdentity=98 hg18.fa SRR886086${i}_clean.fasta SRR886086${i}onhg18_98.psl
-done
-
 
 for i in 3 4 5 6
 do 
 $PATHTOpblat -t=dna -q=dna -threads=10 -maxIntron=0 -minIdentity=98 hg19.fa SRR886086${i}_clean.fasta SRR886086${i}onhg19_98.psl
 done
+
 ```
 ##### R code:
 ```{r}
@@ -68,7 +64,6 @@ doItForgenome <- function(genome){
 }
 
 doItForgenome(19)
-doItForgenome(18)
 
 ```
 #### Results:
@@ -80,14 +75,8 @@ RestingdNTP                       478           386
 Activated                         594           363
 ActivateddNTP                     881           501
 
-> doItForgenome(18)
-              TotalUniquelyMappableIS TotalUniqueIS
-Resting                           965           700
-RestingdNTP                       478           386
-Activated                         588           361
-ActivateddNTP                     871           495
 
 
 ```
-
+#### Results from Brady et. al (on hg18) 
 ![Brady et al table1](https://github.com/MaKuzman/IS_mapping/blob/master/brady.PNG) 
