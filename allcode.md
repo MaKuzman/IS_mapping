@@ -66,7 +66,7 @@ doItForgenome <- function(genome){
 doItForgenome(19)
 
 ```
-#### Results:
+## Results:
 ```
 > doItForgenome(19)
               TotalUniquelyMappableIS TotalUniqueIS
@@ -78,5 +78,5 @@ ActivateddNTP                     881           501
 
 
 ```
-#### Results from Brady et. al (on hg18) 
+### Results from Brady et. al (on hg18) 
 ![Brady et al table1](https://github.com/MaKuzman/IS_mapping/blob/master/brady.PNG) 
